@@ -764,7 +764,7 @@ window.__require = function e(t, n, o) {
             var n = i.default.Spawn("EffectSprite");
             n.parent = this.downEffectPartiParent;
             var o = n.getComponent("EffectSprite");
-            o.Reset(), n.position = e, n.scale = 0, o.SetSprite(r.default.Instance.GetSpriteFrame("ball"), cc.v2(20, 20)), o.node.color = (new cc.Color).fromHEX("#AD0909"), n.setContentSize(a.default.RandomInteger(16, 18), a.default.RandomInteger(16, 18)), n.runAction(cc.sequence(cc.delayTime(.5 * t), cc.delayTime(.5), cc.scaleTo(.1, 0))), n.runAction(cc.sequence(cc.delayTime(.4 * t), cc.scaleTo(.3, 1), cc.moveBy(.6, cc.v2(0, -180)), cc.callFunc(function () {
+            o.Reset(), n.position = e, n.scale = 0, o.SetSprite(r.default.Instance.GetSpriteFrame("ball"), cc.v2(20, 20)), o.node.color = (new cc.Color).fromHEX("#ad0909"), n.setContentSize(a.default.RandomInteger(16, 18), a.default.RandomInteger(16, 18)), n.runAction(cc.sequence(cc.delayTime(.5 * t), cc.delayTime(.5), cc.scaleTo(.1, 0))), n.runAction(cc.sequence(cc.delayTime(.4 * t), cc.scaleTo(.3, 1), cc.moveBy(.6, cc.v2(0, -180)), cc.callFunc(function () {
             }, n)))
           }
         }, t.prototype.LightBoomAndMove = function (e, t) {
@@ -1047,7 +1047,8 @@ window.__require = function e(t, n, o) {
           this.canClick && 0 == cc.find("Canvas/uiEffectPanel").childrenCount && a.default.Instance.RestartGame()
         }, t.prototype.OnClickMoreGame = function () {
           this.canClick && (this.moreGameBtn.off(cc.Node.EventType.TOUCH_START, this.OnClickMoreGame, this), this.canClick = !1, this.moreGameBtn.runAction(cc.sequence(cc.scaleTo(.1, 1.1), cc.scaleTo(.1, 1))), this.scheduleOnce(function () {
-            window.location.href = "http://m.wesane.com/"
+            // window.location.href = "http://m.wesane.com/"
+            window.location.href = ""
           }, .15))
         }, t.prototype.GetContentByScore = function (e) {
           var t = Math.ceil(e / 1500 * 94);
@@ -2143,7 +2144,8 @@ window.__require = function e(t, n, o) {
             i = c.substring(c.lastIndexOf("/game/") + 1, c.length).split("/");
           i.length >= 2 && (a = i[1]), this.gameHttpId = a, cc.log("gameId", a);
           e.substring(e.lastIndexOf("//") + 4, e.lastIndexOf("com") + 3);
-          this.moreGameUrl = "http://m.wesane.com/"
+          // this.moreGameUrl = "http://m.wesane.com/"
+          this.moreGameUrl = ""
         },
         gameOverShowText: function (e, t) {
           this.ajaxLoad("http://www.wesane.com/admin.php/Gamescore/saveGamescore", "gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
